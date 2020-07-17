@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog | Search
+{% endblock title %}
+
+{% block header_extends %}
+{% endblock header_extends %}
+
+{% block nav_home_active %}
+    active
+{% endblock nav_home_active %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                {% if search_words == '' %}
+                    <h3>您没有搜索任何内容</h3>
+                    <p>请尝试输入些内容</p>
+
+                {% else %}
+                    <h3>搜索"{{ search_words }}",找到{{ search_blogs_count }}个结果</h3>
+                    <hr>
+                    {% for blog in search_blogs %}
+                    <div class="thumbnail">
+                        <a href="{% url 'blog_detail' blog.pk%}">
+                            <img src="/media/{{ blog.title_pic }}" alt="Test_Pic" width="500px">
+                        </a>
+                        <a href="{% url 'blog_detail' blog.pk %}">
+                            <h3>{{ blog.title }}</h3>
+                        </a>
+                        <p class="blog-info">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            博客类型：<a href=" {% url 'blogs_with_type' blog.blog_type.pk %}">
+                                {{ blog.blog_type }}</a>
+                            &emsp;  
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            发表日期：{{ blog.created_time|date:"Y-m-d"}}
+                            </p>
+                        <p class="main-content">{{ blog.content|striptags|truncatewords:"10" }}</p>
+                    </div>
+                    {% empty %}
+                        <p>没有找到任何内容，请换个关键词搜索</p>
+                    
+                    {% endfor %}
+                {% endif %}
+                    
+
+            </div>
+        </div>
+    </div>
+{% endblock content %}

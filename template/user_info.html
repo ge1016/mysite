@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block title %}
+    My Blog |  User_info
+{% endblock title %}
+
+{% block nav_home_active %}
+    active
+{% endblock nav_home_active %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-10 col-md-offset-3 col-xs-offset-1">
+                <h2>{{ user.username }}</h2>
+                <ul>
+                    <li>
+                        邮箱：{% if user.email %}{{ user.email }}
+                              {% else %}未绑定 <a href="#">绑定邮箱</a>
+                              {% endif %}
+                    </li>
+                    <li>上次登录时间：{{ user.last_login | date:"Y-m-d H:i:s" }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     
+{% endblock content %}

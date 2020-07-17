@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'blog_list.html' %}
+<!-- 页面标题 -->
+{% block title %}
+    {{ blog_type.type_name }}
+{% endblock title %}
+
+{% block blog_list_title %}
+    分类：{{ blog_type.type_name }} (一共有{{ blogs|length }} 篇博文)
+{% endblock blog_list_title %} 
+

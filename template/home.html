@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    My Blog |  Homepage
+{% endblock title %}
+
+{% block header_extends %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css'%}">
+    <script type="text/javascript" src="{% static 'jquery-1.12.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
+  
+{% endblock header_extends %}
+
+{% block nav_home_active %}
+    active
+{% endblock nav_home_active %}
+
+{% block content %}
+<div class="container">
+    Welcome to My Website.
+</div>
+
+{% endblock content %}

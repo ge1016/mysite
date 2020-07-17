@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog | ErrorPage
+{% endblock title %}
+
+{% block nav_home_active %}
+    active
+{% endblock nav_home_active %}
+
+{% block content %}
+    {{ message }},<a href="{{ redirect_to }}">返回</a>
+{% endblock content %}

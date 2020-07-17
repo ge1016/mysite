@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin-top: 80px!important;
+}
+ul{
+    list-style-type: none;
+}
+.navbar-default{
+    background-color: #004b87!important;
+    border-color: white!important;
+    height: 70px;
+}
+.navbar-brand{
+    color: #ffffff!important;
+  }
+.navbar a{
+    color:white!important;
+}
+.mdt_logo{
+    width:180px;
+    height: 35.11px;
+}
+.link{
+    margin-top: 10px!important;
+}
+.form-group{
+    margin-top: 10px!important;
+    text-align: right!important;
+}
+.btn-default{
+    margin-top: 10px!important;
+    background-color: #0085ca!important;
+    border-color:#0085ca!important;
+    color: white!important;
+}
+.dropdown-btn{
+    margin-top: 10px!important;
+}
+#navbar-collapse{
+    background-color: #004b87!important;
+    
+}
+.navbar-form{
+    margin-bottom: 0!important;
+}
+.thumbnail{
+    margin-top: 20px;
+}
+#content-list{
+    margin-left: -30px!important;
+    margin-top: 5px!important;
+    margin-right: 0!important;
+}
+#login-part{
+    margin-top: 10px!important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    background-color: #004b87!important;
+}
+#dropdown-menu{
+    background-color: #0085ca!important;
+}
+.dropdown-menu>li>a {
+    background-color: #0085ca!important;
+}
